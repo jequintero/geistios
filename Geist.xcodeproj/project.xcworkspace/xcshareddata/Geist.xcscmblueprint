@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "654A95BFF27DFE7CDA799C3DF55A0A021E4A4B79",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B20E2B2EF250689759D79E346378302621D718DE" : 9223372036854775807,
+    "654A95BFF27DFE7CDA799C3DF55A0A021E4A4B79" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "280FC09D-EE12-43A3-8627-BB013EBB1920",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B20E2B2EF250689759D79E346378302621D718DE" : "",
+    "654A95BFF27DFE7CDA799C3DF55A0A021E4A4B79" : "geistios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Geist",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Geist.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jequintero\/geistios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "654A95BFF27DFE7CDA799C3DF55A0A021E4A4B79"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/edgarallanglez\/project_x.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B20E2B2EF250689759D79E346378302621D718DE"
+    }
+  ]
+}
