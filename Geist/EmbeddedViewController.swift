@@ -21,7 +21,7 @@ protocol EmbeddedViewControllerDelegate: class {
     
     // delegate to provide information about other containers
     func isContainerActive(_ position: Position) -> Bool
-    
+
     // delegate to handle containers events
     func onDone(_ sender: AnyObject)
     func onShowContainer(_ position: Position, sender: AnyObject)
@@ -30,6 +30,10 @@ protocol EmbeddedViewControllerDelegate: class {
 class EmbeddedViewController: UIViewController {
     
     weak var delegate: EmbeddedViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        self.title = "Hola"
+    }
     
     @IBAction fileprivate func onDone(_ sender: AnyObject) {
         self.delegate?.onDone(sender)
