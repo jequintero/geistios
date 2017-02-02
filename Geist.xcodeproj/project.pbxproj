@@ -55,6 +55,7 @@
 		A0AA2BDD1E426EF500CFC2F5 /* EmbeddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2BDC1E426EF500CFC2F5 /* EmbeddedViewController.swift */; };
 		A0AA2BE11E42708500CFC2F5 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2BE01E42708500CFC2F5 /* MatchViewController.swift */; };
 		A0AA2BF71E42B64800CFC2F5 /* DynamicBackgroundScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0AA2BF61E42B64800CFC2F5 /* DynamicBackgroundScene.sks */; };
+		A0AA2C001E43B89300CFC2F5 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0AA2BFF1E43B89300CFC2F5 /* Smoke.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +239,7 @@
 		A0AA2BE01E42708500CFC2F5 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		A0AA2BF61E42B64800CFC2F5 /* DynamicBackgroundScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DynamicBackgroundScene.sks; sourceTree = "<group>"; };
 		A0AA2BF91E42B6D200CFC2F5 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A0AA2BFF1E43B89300CFC2F5 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +417,7 @@
 			children = (
 				A0AA2BE01E42708500CFC2F5 /* MatchViewController.swift */,
 				A0AA2BF61E42B64800CFC2F5 /* DynamicBackgroundScene.sks */,
+				A0AA2BFF1E43B89300CFC2F5 /* Smoke.sks */,
 			);
 			name = Match;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				A0AA2BF71E42B64800CFC2F5 /* DynamicBackgroundScene.sks in Resources */,
 				A048334A1E3A7D3700A6B260 /* LaunchScreen.storyboard in Resources */,
 				A04833471E3A7D3700A6B260 /* Assets.xcassets in Resources */,
+				A0AA2C001E43B89300CFC2F5 /* Smoke.sks in Resources */,
 				A04833451E3A7D3700A6B260 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

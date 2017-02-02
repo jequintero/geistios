@@ -125,7 +125,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print("Error")
             } else {
                 let json = JSON(result)
-                print(json)
+                let friends = json["data"]
+                
+                
             }
         })
     }

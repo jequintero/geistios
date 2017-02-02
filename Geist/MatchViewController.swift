@@ -1,9 +1,9 @@
 //
-//  CenterViewController.swift
-//  swipe-navigation
+//  MatchViewController.swift
+//  Geist
 //
-//  Created by Donald Lee on 29/6/16.
-//  Copyright © 2016 Donald Lee. All rights reserved.
+//  Created by Jose Eduardo Quintero Gutiérrez on 01/02/17.
+//  Copyright © 2017 Jose Eduardo Quintero Gutiérrez. All rights reserved.
 //
 
 import UIKit
@@ -11,29 +11,25 @@ import SpriteKit
 
 class MatchViewController: EmbeddedViewController {
     
-    var background: SKView!
+    @IBOutlet var background: SKView!
     
     override func viewDidLoad() {
-        background = SKView(frame: self.view.frame)
+        
+        //Adding particles background
+        
         let background_scene = SKScene(fileNamed: "DynamicBackgroundScene")
         background_scene?.size = self.view.frame.size
         background.presentScene(background_scene)
-        self.view.addSubview(background)
+        background_scene?.backgroundColor = .clear
+        background.allowsTransparency = true
         
-        self.view.sendSubview(toBack: background)
+        let smoke: SKEmitterNode = SKEmitterNode(fileNamed: "Smoke.sks")!
+        background_scene?.addChild(smoke)
+        
+        //self.view.addSubview(background)
+        //self.view.sendSubview(toBack: background)
         
     }
  
-    @IBAction fileprivate func onTopButton(_ sender: UIButton) {
-        delegate?.onShowContainer(.top, sender: sender)
-    }
-    
-    
-    @IBAction fileprivate func onLeftButton(_ sender: UIButton) {
-        delegate?.onShowContainer(.left, sender: sender)
-    }
-    
-    @IBAction fileprivate func onRightButton(_ sender: UIButton) {
-        delegate?.onShowContainer(.right, sender: sender)
-    }
+
 }
