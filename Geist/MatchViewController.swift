@@ -84,12 +84,7 @@ class MatchViewController: EmbeddedViewController{
                     print(responseObject)
                 }
         }
-        
-        
     }
-    
-    
-    
     
     //FB
     
