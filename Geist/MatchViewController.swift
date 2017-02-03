@@ -54,7 +54,8 @@ class MatchViewController: EmbeddedViewController{
             }
         }
         
-
+        
+        loader.type = .ballScaleRippleMultiple
         loader.startAnimating()
         
     }
