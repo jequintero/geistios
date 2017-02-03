@@ -226,6 +226,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-zV-I0e">
                                 <rect key="frame" x="42" y="556" width="292" height="75"/>
                                 <state key="normal" backgroundImage="fb_button"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="uhO-Mb-Gd3" eventType="touchUpInside" id="vgQ-1i-LoP"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rCL-3W-ckt">
                                 <rect key="frame" x="64" y="65" width="246" height="166"/>
@@ -233,6 +236,14 @@
                                     <constraint firstAttribute="width" secondItem="rCL-3W-ckt" secondAttribute="height" multiplier="123:83" id="zbg-Xc-mrm"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-pO-cUq" customClass="NVActivityIndicatorView" customModule="Geist" customModuleProvider="target">
+                                <rect key="frame" x="67" y="321" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hzO-pO-cUq" secondAttribute="height" multiplier="1:1" id="Gpb-ef-czX"/>
+                                    <constraint firstAttribute="width" constant="50" id="mhc-eP-qsh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.3303959407" green="0.77120827879999998" blue="0.72241072910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -243,8 +254,10 @@
                             <constraint firstItem="wNZ-Nb-j9W" firstAttribute="centerX" secondItem="gHU-2Z-4LM" secondAttribute="centerX" id="BVO-Ye-OA5"/>
                             <constraint firstItem="Lv9-QN-ak6" firstAttribute="top" secondItem="nJQ-zV-I0e" secondAttribute="bottom" constant="40" id="BdO-i0-kAi"/>
                             <constraint firstItem="wNZ-Nb-j9W" firstAttribute="height" secondItem="cY7-mn-DGd" secondAttribute="height" id="Djo-Mm-zv5"/>
+                            <constraint firstItem="hzO-pO-cUq" firstAttribute="centerX" secondItem="gHU-2Z-4LM" secondAttribute="centerX" id="Ijv-li-W7Y"/>
                             <constraint firstAttribute="bottom" secondItem="cY7-mn-DGd" secondAttribute="bottom" id="KRN-8z-Jhg"/>
                             <constraint firstItem="GIo-Rx-kk7" firstAttribute="height" secondItem="cY7-mn-DGd" secondAttribute="height" id="XyY-TN-j1i"/>
+                            <constraint firstItem="hzO-pO-cUq" firstAttribute="centerY" secondItem="gHU-2Z-4LM" secondAttribute="centerY" id="bgK-nk-Wyy"/>
                             <constraint firstItem="rCL-3W-ckt" firstAttribute="centerX" secondItem="gHU-2Z-4LM" secondAttribute="centerX" id="cPL-Tr-RX4"/>
                             <constraint firstItem="cY7-mn-DGd" firstAttribute="top" secondItem="gHU-2Z-4LM" secondAttribute="top" id="i3W-9s-WEy"/>
                             <constraint firstItem="nJQ-zV-I0e" firstAttribute="centerX" secondItem="gHU-2Z-4LM" secondAttribute="centerX" id="oLm-e0-YQs"/>
@@ -257,6 +270,8 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="wNZ-Nb-j9W" id="JA6-b5-TMU"/>
+                        <outlet property="loader" destination="hzO-pO-cUq" id="QkC-1g-IV3"/>
+                        <outlet property="login_button" destination="nJQ-zV-I0e" id="aMZ-0J-COf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mY1-Yk-J2k" userLabel="First Responder" sceneMemberID="firstResponder"/>

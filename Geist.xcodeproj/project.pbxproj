@@ -56,6 +56,13 @@
 		A0AA2BE11E42708500CFC2F5 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2BE01E42708500CFC2F5 /* MatchViewController.swift */; };
 		A0AA2BF71E42B64800CFC2F5 /* DynamicBackgroundScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0AA2BF61E42B64800CFC2F5 /* DynamicBackgroundScene.sks */; };
 		A0AA2C001E43B89300CFC2F5 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0AA2BFF1E43B89300CFC2F5 /* Smoke.sks */; };
+		A0AA2C141E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C121E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		A0AA2C151E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C131E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
+		A0AA2C171E45103600CFC2F5 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C161E45103600CFC2F5 /* NVActivityIndicatorView.swift */; };
+		A0AA2C191E45107800CFC2F5 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C181E45107800CFC2F5 /* NVActivityIndicatorAnimationDelegate.swift */; };
+		A0AA2C1D1E4510C700CFC2F5 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C1A1E4510C700CFC2F5 /* NVActivityIndicatorPresenter.swift */; };
+		A0AA2C1E1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C1B1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift */; };
+		A0AA2C1F1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C1C1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +247,13 @@
 		A0AA2BF61E42B64800CFC2F5 /* DynamicBackgroundScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DynamicBackgroundScene.sks; sourceTree = "<group>"; };
 		A0AA2BF91E42B6D200CFC2F5 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		A0AA2BFF1E43B89300CFC2F5 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
+		A0AA2C121E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
+		A0AA2C131E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
+		A0AA2C161E45103600CFC2F5 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		A0AA2C181E45107800CFC2F5 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
+		A0AA2C1A1E4510C700CFC2F5 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		A0AA2C1B1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		A0AA2C1C1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +348,7 @@
 		A048339B1E416D8700A6B260 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A0AA2C111E450FC900CFC2F5 /* Animations */,
 				A0AA2B271E417C3600CFC2F5 /* SwiftyJSON.swift */,
 				A04833A51E416DC000A6B260 /* Bridging-Header.h */,
 				A04833A81E416EB600A6B260 /* Utilities.swift */,
@@ -442,6 +457,20 @@
 				A0AA2BF91E42B6D200CFC2F5 /* SpriteKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0AA2C111E450FC900CFC2F5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A0AA2C1A1E4510C700CFC2F5 /* NVActivityIndicatorPresenter.swift */,
+				A0AA2C1B1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift */,
+				A0AA2C1C1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift */,
+				A0AA2C181E45107800CFC2F5 /* NVActivityIndicatorAnimationDelegate.swift */,
+				A0AA2C161E45103600CFC2F5 /* NVActivityIndicatorView.swift */,
+				A0AA2C121E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
+				A0AA2C131E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,6 +666,7 @@
 				A04833751E3A7DDE00A6B260 /* SocketExtensions.swift in Sources */,
 				A04833A91E416EB600A6B260 /* Utilities.swift in Sources */,
 				A04833731E3A7DDE00A6B260 /* SocketEngineWebsocket.swift in Sources */,
+				A0AA2C141E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				A04833781E3A7DDE00A6B260 /* SocketIOClientOption.swift in Sources */,
 				A04833791E3A7DDE00A6B260 /* SocketIOClientSpec.swift in Sources */,
 				A048337A1E3A7DDE00A6B260 /* SocketIOClientStatus.swift in Sources */,
@@ -652,13 +682,19 @@
 				A048336B1E3A7DDE00A6B260 /* SocketAckManager.swift in Sources */,
 				A04833721E3A7DDE00A6B260 /* SocketEngineSpec.swift in Sources */,
 				A048336A1E3A7DDE00A6B260 /* SocketAckEmitter.swift in Sources */,
+				A0AA2C1F1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift in Sources */,
 				A0AA2B2A1E42487D00CFC2F5 /* SocketIOManager.swift in Sources */,
+				A0AA2C171E45103600CFC2F5 /* NVActivityIndicatorView.swift in Sources */,
+				A0AA2C1D1E4510C700CFC2F5 /* NVActivityIndicatorPresenter.swift in Sources */,
+				A0AA2C191E45107800CFC2F5 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				A0AA2B281E417C3600CFC2F5 /* SwiftyJSON.swift in Sources */,
 				A048336E1E3A7DDE00A6B260 /* SocketEngine.swift in Sources */,
 				A0AA2BDD1E426EF500CFC2F5 /* EmbeddedViewController.swift in Sources */,
 				A0AA2BDB1E426EC400CFC2F5 /* ContainerViewController.swift in Sources */,
+				A0AA2C1E1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift in Sources */,
 				A04833421E3A7D3700A6B260 /* InitViewController.swift in Sources */,
 				A04833401E3A7D3700A6B260 /* AppDelegate.swift in Sources */,
+				A0AA2C151E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				A04833771E3A7DDE00A6B260 /* SocketIOClientConfiguration.swift in Sources */,
 				A04833801E3A7DDE00A6B260 /* SSLSecurity.swift in Sources */,
 				A04833711E3A7DDE00A6B260 /* SocketEnginePollable.swift in Sources */,
