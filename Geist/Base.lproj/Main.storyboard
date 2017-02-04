@@ -231,9 +231,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rCL-3W-ckt">
-                                <rect key="frame" x="124.5" y="100" width="125" height="88"/>
+                                <rect key="frame" x="124.5" y="100" width="125" height="85.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rCL-3W-ckt" secondAttribute="height" multiplier="64:45" id="F4z-23-A3k"/>
+                                    <constraint firstAttribute="width" secondItem="rCL-3W-ckt" secondAttribute="height" multiplier="35:24" id="F4z-23-A3k"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-pO-cUq" customClass="NVActivityIndicatorView" customModule="Geist" customModuleProvider="target">
