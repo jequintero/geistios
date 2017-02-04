@@ -11,6 +11,7 @@ import SpriteKit
 import Alamofire
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SQLite
 
 class MatchViewController: EmbeddedViewController{
     
@@ -22,6 +23,8 @@ class MatchViewController: EmbeddedViewController{
     override func viewDidLoad() {
         
         //Adding particles background
+        
+        //ContainerViewController.shouldSh
         
         let background_scene = SKScene(fileNamed: "DynamicBackgroundScene")
         background_scene?.size = self.view.frame.size
@@ -54,7 +57,8 @@ class MatchViewController: EmbeddedViewController{
             }
         }
         
-
+        
+        loader.type = .ballScaleRippleMultiple
         loader.startAnimating()
         
     }
@@ -119,7 +123,7 @@ class MatchViewController: EmbeddedViewController{
                 if (error == nil){
                     //everything works print the user data
                     print(result)
-                    
+                    self.findFriend()
                     self.login_button.alpha = 0
                     self.login_button.isHidden = true
                 }
@@ -176,7 +180,7 @@ class MatchViewController: EmbeddedViewController{
             } else {
                 let json = JSON(result)
                 let friends = json["data"]
-                
+                print(friends.array![0]["id"])
                 
             }
         })
