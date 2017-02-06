@@ -242,7 +242,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RNJ-YT-eCL" secondAttribute="bottom" id="2wS-tC-klw"/>
                             <constraint firstItem="RNJ-YT-eCL" firstAttribute="leading" secondItem="Gnc-Tc-smz" secondAttribute="leading" id="4Sw-9P-cbx"/>
