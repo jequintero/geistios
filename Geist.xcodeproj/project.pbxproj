@@ -66,6 +66,8 @@
 		A0AA2C1E1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C1B1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift */; };
 		A0AA2C1F1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C1C1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift */; };
 		A0AA2C3F1E4641C400CFC2F5 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C3E1E4641C400CFC2F5 /* Database.swift */; };
+		A0AA2C411E4789AF00CFC2F5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C401E4789AF00CFC2F5 /* Message.swift */; };
+		A0F695B91E47AA000041A039 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F695B81E47AA000041A039 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +318,8 @@
 		A0AA2C1B1E4510C700CFC2F5 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
 		A0AA2C1C1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 		A0AA2C3E1E4641C400CFC2F5 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		A0AA2C401E4789AF00CFC2F5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A0F695B81E47AA000041A039 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,6 +523,8 @@
 		A0AA2BF41E42B60900CFC2F5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				A0AA2C401E4789AF00CFC2F5 /* Message.swift */,
+				A0F695B81E47AA000041A039 /* ChatViewController.swift */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -805,6 +811,7 @@
 				A048337A1E3A7DDE00A6B260 /* SocketIOClientStatus.swift in Sources */,
 				A048337B1E3A7DDE00A6B260 /* SocketLogger.swift in Sources */,
 				A048336C1E3A7DDE00A6B260 /* SocketAnyEvent.swift in Sources */,
+				A0F695B91E47AA000041A039 /* ChatViewController.swift in Sources */,
 				A048337E1E3A7DDE00A6B260 /* SocketStringReader.swift in Sources */,
 				A04833811E3A7DDE00A6B260 /* WebSocket.swift in Sources */,
 				A048337D1E3A7DDE00A6B260 /* SocketParsable.swift in Sources */,
@@ -814,6 +821,7 @@
 				A048337C1E3A7DDE00A6B260 /* SocketPacket.swift in Sources */,
 				A048336B1E3A7DDE00A6B260 /* SocketAckManager.swift in Sources */,
 				A04833721E3A7DDE00A6B260 /* SocketEngineSpec.swift in Sources */,
+				A0AA2C411E4789AF00CFC2F5 /* Message.swift in Sources */,
 				A048336A1E3A7DDE00A6B260 /* SocketAckEmitter.swift in Sources */,
 				A0AA2C1F1E4510C700CFC2F5 /* NVActivityIndicatorViewable.swift in Sources */,
 				A0AA2B2A1E42487D00CFC2F5 /* SocketIOManager.swift in Sources */,

@@ -122,7 +122,9 @@ class MatchViewController: EmbeddedViewController{
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, middle_name, last_name, email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
                     //everything works print the user data
-                    print(result)
+                    
+                    Database.initDB()
+                    /*Database.insertMessage(message_object: Message(id:1, from: 1, to: 1, sent_date: Date(timeIntervalSinceReferenceDate: -123456789.0), delivered_date: Date(timeIntervalSinceReferenceDate: -123456789.0), read_date: Date(timeIntervalSinceReferenceDate: -123456789.0),text: "",type: ""))*/
                     self.findFriend()
                     self.login_button.alpha = 0
                     self.login_button.isHidden = true
@@ -181,7 +183,6 @@ class MatchViewController: EmbeddedViewController{
                 let json = JSON(result)
                 let friends = json["data"]
                 print(friends.array![0]["id"])
-                
             }
         })
     }

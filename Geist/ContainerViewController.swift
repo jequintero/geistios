@@ -503,4 +503,10 @@ class ContainerViewController: UIViewController, EmbeddedViewControllerDelegate,
             embeddedViewController.delegate = self
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
 }
