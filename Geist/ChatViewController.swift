@@ -16,7 +16,7 @@ class ChatViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         scroll_view.delegate = self
-        scroll_view.contentOffset = CGPoint(x: 0, y: scroll_view.frame.size.height*1);
+        scroll_view.contentOffset = CGPoint(x: 0, y: scroll_view.frame.size.height)
 
         let mask_path = UIBezierPath(roundedRect: content_view.bounds, byRoundingCorners:[UIRectCorner.topLeft , UIRectCorner.topRight], cornerRadii: CGSize(width: 10, height: 10))
         
@@ -26,16 +26,11 @@ class ChatViewController: UIViewController, UIScrollViewDelegate {
         mask_layer.path = mask_path.cgPath
         
         content_view.layer.mask = mask_layer
-        
-
-
-
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.y / scrollView.frame.size.height
-        
-        if page == 0{
+        if page == 0 {
             self.dismiss(animated: false, completion: nil)
         }
 
@@ -46,7 +41,7 @@ class ChatViewController: UIViewController, UIScrollViewDelegate {
 }
 
 extension UIScrollView {
-    var currentPage:Int{
+    var currentPage: Int {
         return Int((self.contentOffset.x+(0.5*self.frame.size.width))/self.frame.width)+1
     }
 }

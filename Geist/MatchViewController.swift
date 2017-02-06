@@ -60,9 +60,15 @@ class MatchViewController: EmbeddedViewController{
         
         loader.type = .ballScaleRippleMultiple
         loader.startAnimating()
+
         
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+//        vc.modalPresentationStyle = .overCurrentContext
+//        self.present(vc, animated: true, completion: nil)
+//    }
     
     func match(){
         var request = URLRequest(url: URL(fileURLWithPath: Utilities.url))
