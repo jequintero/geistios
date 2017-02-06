@@ -169,7 +169,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rN2-Fq-xhL">
             <objects>
-                <navigationController id="TA5-f7-EWG" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="TA5-f7-EWG" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yNS-2k-fYg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -193,7 +193,18 @@
                     <view key="view" contentMode="scaleToFill" id="Lrg-Zw-LLg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_list" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-aD-JtB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gOV-zM-V9i" firstAttribute="top" secondItem="ybG-aD-JtB" secondAttribute="bottom" id="Jnb-0K-qWX"/>
+                            <constraint firstItem="ybG-aD-JtB" firstAttribute="leading" secondItem="Lrg-Zw-LLg" secondAttribute="leading" id="Mhs-J2-OAu"/>
+                            <constraint firstAttribute="trailing" secondItem="ybG-aD-JtB" secondAttribute="trailing" id="aeG-L3-yO0"/>
+                            <constraint firstItem="ybG-aD-JtB" firstAttribute="top" secondItem="hcJ-iT-oEq" secondAttribute="bottom" id="mp2-k8-K7L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zT7-vR-4PR"/>
                 </viewController>
@@ -236,8 +247,8 @@
                                     <constraint firstAttribute="width" secondItem="rCL-3W-ckt" secondAttribute="height" multiplier="35:24" id="F4z-23-A3k"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-pO-cUq" customClass="NVActivityIndicatorView" customModule="Geist" customModuleProvider="target">
-                                <rect key="frame" x="67" y="321" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-pO-cUq" customClass="NVActivityIndicatorView" customModule="Geist" customModuleProvider="target">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hzO-pO-cUq" secondAttribute="height" multiplier="1:1" id="Gpb-ef-czX"/>
@@ -281,7 +292,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dCb-Df-HuJ">
             <objects>
-                <navigationController id="pKj-wl-8lj" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="pKj-wl-8lj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VHX-hZ-EHK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -305,7 +316,18 @@
                     <view key="view" contentMode="scaleToFill" id="Mma-P5-34f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="iIg-OS-Eh9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iIg-OS-Eh9" secondAttribute="trailing" id="6ja-zB-adK"/>
+                            <constraint firstItem="iIg-OS-Eh9" firstAttribute="top" secondItem="b0H-Gs-Kql" secondAttribute="bottom" id="OMU-mb-4r4"/>
+                            <constraint firstItem="iIg-OS-Eh9" firstAttribute="leading" secondItem="Mma-P5-34f" secondAttribute="leading" id="PYP-jf-U4I"/>
+                            <constraint firstItem="4AM-S4-GKx" firstAttribute="top" secondItem="iIg-OS-Eh9" secondAttribute="bottom" id="ajr-Ks-gaV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CP4-Ly-8cS"/>
                 </viewController>
@@ -315,11 +337,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat_list" width="1242" height="2208"/>
         <image name="fb_button" width="16" height="16"/>
         <image name="login_background" width="16" height="16"/>
         <image name="login_background_inverted" width="16" height="16"/>
         <image name="login_gradient" width="16" height="16"/>
         <image name="login_gradient_inverted" width="16" height="16"/>
         <image name="logo" width="16" height="16"/>
+        <image name="profile" width="16" height="16"/>
     </resources>
 </document>
