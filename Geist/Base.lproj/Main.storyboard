@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R8x-sp-Sru">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R8x-sp-Sru">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,6 +181,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2G3-h8-Vyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1159" y="1818"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="9yz-F1-2Z9">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="pUN-l1-KyV" customClass="ChatViewController" customModule="Geist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ID9-Wh-adz"/>
+                        <viewControllerLayoutGuide type="bottom" id="0U9-D1-jIl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gnc-Tc-smz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-YT-eCL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zd-HW-BCM" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="1334"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ltt-My-hVK" userLabel="ExtraView">
+                                                <rect key="frame" x="67" y="603" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="bL4-2A-rDH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8b-tc-VqH">
+                                                <rect key="frame" x="0.0" y="667" width="375" height="667"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Que paso amiguito?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-8A-1Cb">
+                                                        <rect key="frame" x="107" y="77" width="160" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Ltt-My-hVK" firstAttribute="leading" secondItem="1zd-HW-BCM" secondAttribute="leading" id="2e3-P4-YAC"/>
+                                            <constraint firstAttribute="bottom" secondItem="F8b-tc-VqH" secondAttribute="bottom" id="3z4-IN-ysr"/>
+                                            <constraint firstAttribute="trailing" secondItem="F8b-tc-VqH" secondAttribute="trailing" id="7Yx-mF-R7r"/>
+                                            <constraint firstItem="Ltt-My-hVK" firstAttribute="top" secondItem="F8b-tc-VqH" secondAttribute="bottom" id="D0O-J1-XXL"/>
+                                            <constraint firstItem="F8b-tc-VqH" firstAttribute="leading" secondItem="1zd-HW-BCM" secondAttribute="leading" id="M5z-uQ-Ptr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ltt-My-hVK" secondAttribute="trailing" id="aWG-0S-FsB"/>
+                                            <constraint firstAttribute="trailing" secondItem="F8b-tc-VqH" secondAttribute="trailing" id="kzc-2n-1qs"/>
+                                            <constraint firstItem="F8b-tc-VqH" firstAttribute="leading" secondItem="1zd-HW-BCM" secondAttribute="leading" id="qDV-kP-FiP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1zd-HW-BCM" secondAttribute="trailing" id="WXF-sG-m7f"/>
+                                    <constraint firstItem="1zd-HW-BCM" firstAttribute="top" secondItem="RNJ-YT-eCL" secondAttribute="top" constant="60" id="emJ-6s-kEP"/>
+                                    <constraint firstAttribute="bottom" secondItem="1zd-HW-BCM" secondAttribute="bottom" id="nbl-Gp-RIe"/>
+                                    <constraint firstItem="1zd-HW-BCM" firstAttribute="leading" secondItem="RNJ-YT-eCL" secondAttribute="leading" id="oJJ-wa-Gvm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RNJ-YT-eCL" secondAttribute="bottom" id="2wS-tC-klw"/>
+                            <constraint firstItem="RNJ-YT-eCL" firstAttribute="leading" secondItem="Gnc-Tc-smz" secondAttribute="leading" id="4Sw-9P-cbx"/>
+                            <constraint firstItem="RNJ-YT-eCL" firstAttribute="top" secondItem="Gnc-Tc-smz" secondAttribute="top" id="8tS-8b-baD"/>
+                            <constraint firstItem="1zd-HW-BCM" firstAttribute="height" secondItem="Gnc-Tc-smz" secondAttribute="height" multiplier="2" id="Jsd-80-57H"/>
+                            <constraint firstAttribute="trailing" secondItem="RNJ-YT-eCL" secondAttribute="trailing" id="M1Q-k3-QEP"/>
+                            <constraint firstItem="F8b-tc-VqH" firstAttribute="height" secondItem="Gnc-Tc-smz" secondAttribute="height" id="vKj-U5-5TX"/>
+                            <constraint firstItem="1zd-HW-BCM" firstAttribute="width" secondItem="Gnc-Tc-smz" secondAttribute="width" id="vjA-VG-h2e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="content_view" destination="F8b-tc-VqH" id="1nx-Oh-gC6"/>
+                        <outlet property="scroll_view" destination="RNJ-YT-eCL" id="eHO-ip-y0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CV0-8U-bL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743.20000000000005" y="2893.403298350825"/>
         </scene>
         <!--Embedded View Controller-->
         <scene sceneID="fgT-5D-BDo">
