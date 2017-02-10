@@ -130,10 +130,31 @@ class MatchViewController: EmbeddedViewController{
                     //everything works print the user data
                     
                     Database.initDB()
-                    /*Database.insertMessage(message_object: Message(id:1, from: 1, to: 1, sent_date: Date(timeIntervalSinceReferenceDate: -123456789.0), delivered_date: Date(timeIntervalSinceReferenceDate: -123456789.0), read_date: Date(timeIntervalSinceReferenceDate: -123456789.0),text: "",type: ""))*/
-                    self.findFriend()
+                    /*Database.insertMessage(message_object: Message(id:1, from: 1, to: 1, sent_date: Date(timeIntervalSinceReferenceDate: -123456789.0), delivered_date: Date(timeIntervalSinceReferenceDate: -123456789.0), read_date: Date(timeIntervalSinceReferenceDate: -123456789.0),text: "Como estas?",type: ""))*/
+                    //self.findFriend()
                     self.login_button.alpha = 0
                     self.login_button.isHidden = true
+                    print("Access token \(FBSDKAccessToken.current().tokenString)")
+                    /*let params:[String: String] = [
+                        "acess_token" : ""]
+                        
+                    Alamofire.request("\(Utilities.url)match", method: .post, parameters: params).validate().responseJSON { response in
+                        switch response.result {
+                        case .success:
+                            print("GOGO")
+                            if let json :JSON = JSON(response.result.value) {
+                                
+                                print(json)
+                                //Me.init(item: json)
+                                //self.performSegue(withIdentifier: "init", sender: self)
+                            }
+                        case .failure:
+                            print("Error")
+                        }
+                    }*/
+
+                    
+                    
                 }
             })
         }

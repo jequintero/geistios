@@ -12,6 +12,7 @@ import SQLite
 class Database: NSObject {
     static var db: Connection!
     static var message: Table!
+    static var setting: Table!
     
     static func initDB(){
         let path = NSSearchPathForDirectoriesInDomains(
@@ -44,7 +45,28 @@ class Database: NSObject {
                     table.column(type)
                 })
             }catch{
-                print("Hm, cant create db. \(error)")
+                print("Hm, cant create chats db. \(error)")
+            }
+            
+            setting = Table("Setting")
+            
+            let setting_id = Expression<Int64>("id")
+            let user_id = Expression<Int64?>("user_id")
+            let filter = Expression<Int64>("filter")
+            let revelation_days = Expression<Int64>("revelation_days")
+            let pro = Expression<Bool>("pro")
+
+            
+            do {
+                try db.run(setting.create(ifNotExists: true) { table in
+                    table.column(setting_id, primaryKey: true)
+                    table.column(user_id)
+                    table.column(filter)
+                    table.column(revelation_days)
+                    table.column(pro)
+                })
+            }catch{
+                print("Hm, cant create settings db. \(error)")
             }
             
         }catch{

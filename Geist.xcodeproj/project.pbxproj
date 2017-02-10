@@ -68,6 +68,7 @@
 		A0AA2C3F1E4641C400CFC2F5 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C3E1E4641C400CFC2F5 /* Database.swift */; };
 		A0AA2C411E4789AF00CFC2F5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA2C401E4789AF00CFC2F5 /* Message.swift */; };
 		A0F695B91E47AA000041A039 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F695B81E47AA000041A039 /* ChatViewController.swift */; };
+		A0F695C41E497C8D0041A039 /* ChatBubbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F695C31E497C8D0041A039 /* ChatBubbleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +321,7 @@
 		A0AA2C3E1E4641C400CFC2F5 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A0AA2C401E4789AF00CFC2F5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A0F695B81E47AA000041A039 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A0F695C31E497C8D0041A039 /* ChatBubbleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +527,7 @@
 			children = (
 				A0AA2C401E4789AF00CFC2F5 /* Message.swift */,
 				A0F695B81E47AA000041A039 /* ChatViewController.swift */,
+				A0F695C31E497C8D0041A039 /* ChatBubbleCell.swift */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				A0AA2C151E450FDA00CFC2F5 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				A04833771E3A7DDE00A6B260 /* SocketIOClientConfiguration.swift in Sources */,
 				A04833801E3A7DDE00A6B260 /* SSLSecurity.swift in Sources */,
+				A0F695C41E497C8D0041A039 /* ChatBubbleCell.swift in Sources */,
 				A04833711E3A7DDE00A6B260 /* SocketEnginePollable.swift in Sources */,
 				A0AA2BE11E42708500CFC2F5 /* MatchViewController.swift in Sources */,
 				A04833701E3A7DDE00A6B260 /* SocketEnginePacketType.swift in Sources */,
