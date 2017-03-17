@@ -44,6 +44,8 @@ class ChatViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
 
         
         print(chat_collection_view.frame.size.width)
+        
+        /*Database.insertMessage(message_object: Message(id:1, from: 1, to: 1, sent_date: Date(timeIntervalSinceReferenceDate: -123456789.0), delivered_date: Date(timeIntervalSinceReferenceDate: -123456789.0), read_date: Date(timeIntervalSinceReferenceDate: -123456789.0),text: "Como estas?",type: ""))*/
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,7 +118,7 @@ class ChatViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         
         return cell
     }
-
+    
 }
 
 

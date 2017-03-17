@@ -41,7 +41,8 @@ class MatchViewController: EmbeddedViewController{
         validateFBSession()
         
         let params = ["JO":"JE"]
-        Alamofire.request("http://localhost:3000/match", method: .post, parameters: params).validate().responseJSON { response in
+        
+        /*Alamofire.request("http://localhost:3000/match", method: .post, parameters: params).validate().responseJSON { response in
             switch response.result {
             case .success:
                 print("GOGO")
@@ -55,7 +56,7 @@ class MatchViewController: EmbeddedViewController{
             case .failure:
                 print("Error")
             }
-        }
+        }*/
         
         
         loader.type = .ballScaleRippleMultiple
@@ -112,7 +113,7 @@ class MatchViewController: EmbeddedViewController{
     @IBAction func loginButtonPressed(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
 
-        fbLoginManager.logIn(withReadPermissions:["public_profile", "email", "user_friends"], from: self) { (result, error) -> Void in
+        fbLoginManager.logIn(withReadPermissions:["public_profile", "email", "user_friends", "user_birthday"], from: self) { (result, error) -> Void in
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result!
                 if(fbloginresult.grantedPermissions.contains("email"))
@@ -125,12 +126,42 @@ class MatchViewController: EmbeddedViewController{
     
     func getFBUserData() {
         if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, middle_name, last_name, email"]).start(completionHandler: { (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, middle_name, last_name, email, birthday, gender"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
-                    //everything works print the user data
-                    
                     Database.initDB()
-                    /*Database.insertMessage(message_object: Message(id:1, from: 1, to: 1, sent_date: Date(timeIntervalSinceReferenceDate: -123456789.0), delivered_date: Date(timeIntervalSinceReferenceDate: -123456789.0), read_date: Date(timeIntervalSinceReferenceDate: -123456789.0),text: "Como estas?",type: ""))*/
+                    /* */
+                    
+                    let json: JSON = JSON(result)
+                    print(json)
+                    var names = json["first_name"].string!
+                    if json["middle_name"].string != ""{
+                        names = "\(names) \(json["middle_name"])"
+                    }
+                    let params = ["names": names,
+                                  "surnames": json["last_name"].string ?? "",
+                                  "email": json["email"].string ?? "",
+                                  "birth_date": json["birthday"].string ?? "",
+                                  "gender": json["gender"].string ?? "",
+                                  "facebook_id": json["id"].string!,
+                                  "user_image": "https://graph.facebook.com/\(json["id"].string!)/picture?height=400"]
+
+                    
+                    Alamofire.request("http://localhost:3000/auth/login", method: .post, parameters: params).validate().responseJSON { response in
+                        switch response.result {
+                        case .success:
+                            print("GOGO")
+                            if let json :JSON = JSON(response.result.value) {
+                                print(json)
+                                //Me.init(item: json)
+                                //self.performSegue(withIdentifier: "init", sender: self)
+                            }
+                        case .failure:
+                            print("Error en login")
+                        }
+                    }
+                    
+                    
+                    
                     //self.findFriend()
                     self.login_button.alpha = 0
                     self.login_button.isHidden = true
